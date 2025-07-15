@@ -5,7 +5,7 @@
   functions = "functions"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "18"
 
 # REDIRECT and HEADERS examples
 
