@@ -64,5 +64,8 @@
     "url-pattern": "^1.0.3"
     "sharp": "^0.32.1"
   },
+  "engines": {
+  "node": "20.14.0"
+  },
   "main": ".eleventy.js"
 }
