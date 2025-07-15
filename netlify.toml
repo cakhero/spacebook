@@ -4,6 +4,9 @@
   #command = "npm run build && set -e && find ./_site -type f -name '*.html' -exec staticrypt -f password_template.html {} $PASSWORD -o {} \\;"
   functions = "functions"
 
+[build.environment]
+  NODE_VERSION = "18"
+
 # REDIRECT and HEADERS examples
 
 # Redirect rule example
