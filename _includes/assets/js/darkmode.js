@@ -16,4 +16,4 @@ function activateDarkMode() {
   applyThemeColor()
 }
 
-applyThemeColor()
+// applyThemeColor()
