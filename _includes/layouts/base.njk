@@ -1,8 +1,7 @@
 <!doctype html>
 <html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
   {% include "components/head.njk" %}
-  {#<body>#}
-  <body class="flex flex-col min-h-screen bg-white dark:bg-gray-900">
+  <body>
     {#<div id="app" class="h-screen bg-white dark:bg-gray-900">#}
     <div id="app" class="relative min-h-screen bg-white dark:bg-gray-900">
       {% include "components/header.njk" %}
@@ -29,9 +28,8 @@
         <main id="main" class="dark:bg-gray-900 pt-16 sm:pt-18 md:pt-20 md:pl-64 lg:pl-72">
       {% endif %}     
         {{ layoutContent | safe }} 
-        {#{% include "components/footer.njk" %}#} 
+        {% include "components/footer.njk" %}
         </main>
-      {% include "components/footer.njk" %}
     </div>
   </body>
 </html>
