@@ -96,6 +96,10 @@ abbr[title] {
           text-decoration: underline dotted;
 }
 
+a[href^="http"] {
+  text-decoration: none;
+}
+
 /**
 Add the correct font weight in Edge and Safari.
 */
