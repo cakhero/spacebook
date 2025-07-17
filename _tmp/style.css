@@ -96,7 +96,7 @@ abbr[title] {
           text-decoration: underline dotted;
 }
 
-a[href^="https"] {
+a {
   text-decoration: none;
 }
 
