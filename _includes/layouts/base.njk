@@ -1,7 +1,8 @@
 <!doctype html>
 <html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
   {% include "components/head.njk" %}
-  <body>
+  {#<body>#}
+  <body class="flex flex-col min-h-screen">
     {#<div id="app" class="h-screen bg-white dark:bg-gray-900">#}
     <div id="app" class="relative min-h-screen bg-white dark:bg-gray-900">
       {% include "components/header.njk" %}
