@@ -1,11 +1,11 @@
 <!doctype html>
-<html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
+<html {% if section %} data-current="{{ section }}"{% endif %} lang="en" class="h-full">
   {% include "components/head.njk" %}
-  <body class="flex flex-col min-h-screen bg-white dark:bg-gray-900">
-    <div id="app" class="flex flex-col flex-grow">
-
+  <body class="flex flex-col h-full bg-white dark:bg-gray-900">
+    <div id="app" class="flex flex-col flex-grow min-h-0">
+    
       {% include "components/header.njk" %}
-
+    
       {% if site.navigationStyle == "vertical" %}
       <nav id="navigation" class="fixed top-0 bottom-0 overflow-x-hidden overflow-y-auto hidden w-1/2 md:w-64 lg:w-72 md:mt-20 md:block dark:bg-gray-900 flex-none p-4 md:border-r border-b border-gray-100 dark:border-gray-800">
         <button name="Close navigation" onclick="closeNavigation()" class="float-right justify-end block md:hidden -mr-4 p-6">
@@ -14,7 +14,14 @@
           </svg>
         </button>
         <div class="clear-right">
-          {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({anchorClass: "item",activeAnchorClass: "active",activeListItemClass: "active",activeKey: eleventyNavigation.key, listClass: "nav", listItemClass: "item"}) | safe }}
+          {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
+            anchorClass: "item",
+            activeAnchorClass: "active",
+            activeListItemClass: "active",
+            activeKey: eleventyNavigation.key,
+            listClass: "nav",
+            listItemClass: "item"
+          }) | safe }}
         </div>
       </nav>
       {% endif %}
